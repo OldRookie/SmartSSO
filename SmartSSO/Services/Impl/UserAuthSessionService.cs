@@ -13,7 +13,7 @@ namespace SmartSSO.Services.Impl
     {
         public UserAuthSessionService()
         {
-            SetCacheInstance(new EnyimMemcachedContext());
+            SetCacheInstance(new RedisCacheContext());
         }
 
         public UserAuthSession ExistsByValid(string appKey, string userName)
