@@ -7,7 +7,7 @@ using System.Web.Routing;
 using log4net;
 using SmartSSO.Entities;
 
-namespace WY.SSO
+namespace SmartSSO
 {
     public class MvcApplication : System.Web.HttpApplication
     {

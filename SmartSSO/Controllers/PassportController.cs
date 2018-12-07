@@ -108,6 +108,8 @@ namespace SmartSSO.Controllers
                 SessionKey = currentSession.SessionKey
             });
 
+         
+
             var redirectUrl = string.Format("{0}?SessionKey={1}&SessionUserName={2}",
                 appInfo.ReturnUrl, 
                 currentSession.SessionKey, 

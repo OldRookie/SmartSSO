@@ -36,5 +36,12 @@ namespace SmartSSO.ApiControllers
 
             return false;
         }
+
+        public bool LoginOff(string sessionKey = "", string remark = "")
+        {
+            _authSessionService.RemoveCache(sessionKey);
+
+            return false;
+        }
     }
 }

@@ -25,6 +25,18 @@
                     <li>@Html.ActionLink("关于", "About", "Home")</li>
                     <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
                 </ul>
+                @if (Request.IsAuthenticated || (User != null && User.Identity != null))
+                {
+                    using (Html.BeginForm("LogOff", "Home", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                    {
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                @User.Identity.Name
+                            </li>
+                            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                        </ul>
+                    }
+                }
             </div>
         </div>
     </div>

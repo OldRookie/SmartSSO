@@ -80,5 +80,12 @@ namespace SmartSSO.Services.Impl
 
             return false;
         }
+
+        public bool RemoveCache(string sessionKey)
+        {
+            CacheContext.Remove(sessionKey);
+
+            return false;
+        }
     }
 }

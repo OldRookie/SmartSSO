@@ -18,5 +18,7 @@ namespace SmartSSO.Services
         void ExtendValid(string sessionkey);
 
         bool GetCache(string sessionKey);
+
+        bool RemoveCache(string sessionKey);
     }
 }
